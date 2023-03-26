@@ -49,7 +49,7 @@ List<dynamic> business = [];
      DioHelper.getData(
          url: 'v2/top-headlines',
          query: {
-           'country':'eg',
+           'country':'us',
            'category':'business',
            'apiKey':'14ea9825bca44ef8bfaa37a0af0df5ba',
          }).then((value)
@@ -68,7 +68,7 @@ List<dynamic> business = [];
     DioHelper.getData(
         url: 'v2/top-headlines',
         query: {
-          'country':'eg',
+          'country':'us',
           'category':'sport',
           'apiKey':'14ea9825bca44ef8bfaa37a0af0df5ba',
         }).then((value)
@@ -88,7 +88,7 @@ List<dynamic> business = [];
     DioHelper.getData(
         url: 'v2/top-headlines',
         query: {
-          'country':'eg',
+          'country':'us',
           'category':'science',
           'apiKey':'14ea9825bca44ef8bfaa37a0af0df5ba',
         }).then((value)
