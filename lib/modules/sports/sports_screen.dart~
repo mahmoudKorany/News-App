@@ -1,0 +1,25 @@
+import 'package:flutter/material.dart';
+import 'package:news/layout/cubit/news_cubit.dart';
+import 'package:news/shared/components/component.dart';
+
+Widget sportsScreen(context) {
+  List<dynamic> map = NewsCubit.get(context).sports;
+  return ListView.separated(
+    physics: const BouncingScrollPhysics(),
+    itemBuilder: (context,index) {
+      return newsItem(
+          context,
+          news: map[index],
+          type: 'sports',
+          index: index
+      );
+    },
+    separatorBuilder: (context,index) => Container(
+      padding: const EdgeInsetsDirectional.only(start: 20.0),
+      width: double.infinity,
+      height: 1,
+      color: Theme.of(context).primaryColor,
+    ),
+    itemCount: map.length,
+  );
+}
